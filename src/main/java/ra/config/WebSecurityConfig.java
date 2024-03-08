@@ -44,7 +44,7 @@ public class WebSecurityConfig {
     }
     @Bean
     WebSecurityCustomizer webSecurityCustomizer() {
-        return (web -> web.ignoring().requestMatchers("/accsets/**", "/fe/**", "/uploads/**"));
+        return (web -> web.ignoring().requestMatchers("/accsets/**", "/fe/**", "/templates/uploads/**"));
     }
 
     @Bean

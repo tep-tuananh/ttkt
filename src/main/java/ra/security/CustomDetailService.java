@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import ra.model.entity.User;
+import ra.repository.UserReposotory;
 import ra.service.user.UserService;
 
 import java.util.Optional;
@@ -15,11 +16,11 @@ import java.util.Optional;
 @Service
 public class CustomDetailService implements UserDetailsService {
     @Autowired
-    private UserService userService;
+    private UserReposotory userReposotory;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<User> userOptional = userService.findByUserName(username);
+        Optional<User> userOptional = userReposotory.findUserByUserName(username);
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             return UserPincipal.builder()

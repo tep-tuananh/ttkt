@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fra/head :: head"></head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+    <div th:replace="/fra/header :: header"></div>
+    <!-- =============================================== -->
+
+    <!-- Left side column. contains the sidebar -->
+    <div th:replace="/fra/siderbar :: sibar"></div>
+    <!-- =============================================== -->
+
+    <!-- Left side column. contains the sidebar -->
+    <div th:replace="/fra/siderbar :: sibar"></div>
+    <script th:src="@{/accsets/js/jquery.min.js}"></script>
+    <script th:src="@{/accsets/js/jquery-ui.js}"></script>
+    <script th:src="@{/accsets/js/bootstrap.min.js}"></script>
+    <script th:src="@{/accsets/js/adminlte.min.js}"></script>
+    <script th:src="@{/accsets/js/dashboard.js}"></script>
+    <script th:src="@{/accsets/js/function.js}"></script>
+</div>
+</body>
+</html>
